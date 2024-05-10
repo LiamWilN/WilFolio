@@ -1,0 +1,14 @@
+{
+    "name": "William Calda",
+
+    "workExperience": [
+        { "id": 1, "company-name": "Readyman, Inc.", "jobtitle": "IT Tech Support" },
+        { "id": 2, "company-name": "Tech Mahindra", "jobtitle": "IT Technical Support Engineer" }
+    ],
+
+
+    "navigation": [
+        { "id": 1, "nav-name": "About" },
+        { "id": 2, "nav-name": "Contact" }
+    ]
+}
