@@ -2,7 +2,7 @@ import WiLogo from '../assets/main-black.png'
 import { MainLogo } from './Images'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { HeadNavigation } from './Navigation'
+import { HeadNavigation, HiddenNavigation } from './Navigation'
 
 
 const Header = () => {
@@ -10,9 +10,9 @@ const Header = () => {
   const [currentMenu, menuState] = useState(false)
 
   return (
-    <div className='container mx-auto'>
-      <div className="h-24 flex mx-4 justify-between items-center">
-        <div className='flex items-center gap-1'>
+    <div className='container mx-auto border-b-2'>
+      <div className="h-16 md:h-24 flex mx-4 justify-between items-center">
+        <div className='flex items-center gap-2'>
           <MainLogo imgprops={
               { loc: WiLogo, title: 'William Calda' }
             } 
@@ -30,6 +30,9 @@ const Header = () => {
           </button>
         </div>
       </div>
+      {
+        currentMenu ? <HiddenNavigation /> : false
+      }
     </div>
   )
 }

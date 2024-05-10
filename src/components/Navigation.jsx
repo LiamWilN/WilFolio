@@ -7,15 +7,27 @@ export const HeadNavigation = () => {
           {
             Data.navigation.map( (i) => {
               return (
-                <ul key={i.id}>
-                  <li className='mx-2'>
-                    <a href="">{i['nav-name']}</a>
-                  </li>
-                </ul>
+                <div key={i.id}>
+                  <a href="#" className='mx-2'>{i['nav-name']}</a>
+                </div>
               )
             })
           }
         </div>
     </>
+  )
+}
+
+export const HiddenNavigation = () => {
+  return (
+    <div className='h-28 bg-slate-600'> 
+      {
+        Data.navigation.map( (i) => {
+          <div key={i.id}>
+            <a href="#" className='mx-2'>{i['nav-name']}</a>
+          </div>
+        })
+      }
+    </div>
   )
 }
