@@ -4,6 +4,7 @@ import { initializeApp } from 'firebase/app'
 import { toast, ToastContainer } from 'react-toastify';
 import { getDatabase, ref, get, child } from 'firebase/database';
 
+
 const App = () => {
 
   const [data, setData] = useState(null);
@@ -24,15 +25,10 @@ const App = () => {
     });
   }, []);
 
-  if (!data) {
-    return toast.info("Fetching Data from Firebase");
-  }
-
   console.log(data)
 
   return (
     <>
-      App
       <ToastContainer />
     </>
   );
