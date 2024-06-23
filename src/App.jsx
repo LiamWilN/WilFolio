@@ -1,10 +1,8 @@
-import Home from "./pages/Home"
+import React from 'react'
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Home/>
-    </>
+    <div>App</div>
   )
 }
 
